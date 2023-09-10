@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "Tinhlaixuat";
+}
+<div class="d-flex flex-column">
+    <h1 class="text-center my-5 text-uppercase">chương trình tính tổng hai số</h1>
+    <div class="d-flex flex-column justify-content-between gap-3">
+        <div class="col-4 mx-auto">
+            <form action="/Tinhlaixuat/Index" method="post">
+                <div class="mb-3">
+                    <label for="soNguyen1" class="form-label">Số nguyên 1</label>
+                    <input type="number" inputmode="numeric" class="form-control" id="soTiengui" name="soTiengui" value="@ViewData["soTiengui"]" aria-describedby="text">
+                </div>
+                <div class="mb-3">
+                    <label for="soNguyen2" class="form-label">Số nguyên 2</label>
+                    <input type="number" inputmode="numeric" class="form-control" id="laixuatgui" name="laixuatgui" value="@ViewData["laixuatgui"]" aria-describedby="text">
+                </div>
+                <div class="mb-3">
+                    <label for="soNguyen2" class="form-label">Số nguyên 2</label>
+                    <input type="number" inputmode="numeric" class="form-control" id="kyhangui" name="kyhangui" value="@ViewData["SoNguyen2"]" aria-describedby="text">
+                </div>
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                    <button type="submit" id="ketqua" class="btn btn-primary px-4 py-2">Xem kết quả</button>
+                </div>
+            </form>
+        </div>
+        @if (ViewData["Message"] != "")
+        {
+            <div class="mb-5 col-4 mx-auto">
+                <label for="thongbao" class="form-label fw-bold">Kết quả 1</label>
+                <input type="text" class="form-control" id="thongbao" name="thongbao" value="@ViewData["Message"]" aria-describedby="text" disabled>
+            </div>
+        }
+        else
+        {
+            <div class="mb-5 col-4 mx-auto">
+                <label for="ketQua" class="form-label fw-bold">Kết quả 1</label>
+                <input type="number" class="form-control" id="ketQua" name="ketQua" value="@ViewData["KetQua1"]" aria-describedby="text">
+            </div>
+        }
+        @if (ViewData["Message"] != "")
+        {
+            <div class="mb-5 col-4 mx-auto">
+                <label for="thongbao" class="form-label fw-bold">Kết quả 2</label>
+                <input type="text" class="form-control" id="thongbao" name="thongbao" value="@ViewData["Message"]" aria-describedby="text" disabled>
+            </div>
+        }
+        else
+        {
+            <div class="mb-5 col-4 mx-auto">
+                <label for="ketQua" class="form-label fw-bold">Kết quả 2</label>
+                <input type="number" class="form-control" id="ketQua" name="ketQua" value="@ViewData["KetQua2"]" aria-describedby="text">
+            </div>
+        }
+    </div>
+</div>
+<h1>Index</h1>
+
